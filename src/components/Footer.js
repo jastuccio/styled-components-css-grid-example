@@ -3,10 +3,10 @@ import styled from 'styled-components'
 import { above, colors } from '../util'
 
 const StyledFooter = styled.footer`
-  background: ${colors.black};
+  background: ${colors.gray};
   width: 100vw;
-  position: relative;
-  bottom: 0;
+  /* position: relative;
+  bottom: 0; */
   grid-area: footer;
 
   ${above.small`
@@ -16,11 +16,9 @@ const StyledFooter = styled.footer`
 
 const FooterWrapper = styled.div`
 
-
-  /* ${above.small`
-    grid-area: main;
-  /* flex-grow: 1; */
-  `} */
+  ${above.small`
+    /* grid-area: main; */
+  `}
 `
 
 const Footer = () => {

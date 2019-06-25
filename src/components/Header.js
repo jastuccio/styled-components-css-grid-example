@@ -19,8 +19,12 @@ const Sheader = styled.header`
   position: Fixed;
   top: 0;
 `
-const SLink = styled.a`
 
+const SHeaderWrapper = styled.div`
+  grid-column: 2 / 3;
+`
+
+const SLink = styled.a`
 /* activeClassName = "active" */
   color: ${colors.black};
   ${font.size4};
@@ -71,28 +75,12 @@ const Snav = styled.nav`
 
 const Header = () => (
   <Sheader>
+    <SHeaderWrapper>
     <h1>
       <Stitlelink to="/">Batman</Stitlelink>
     </h1>
-    <Snav>
-      <Sul>
-        <Sli>
-          <SLink to="/">Home</SLink>
-        </Sli>
-        <Sli>
-          <SLink to="/projects/">Projects</SLink>
-        </Sli>
-        <Sli>
-          <SLink to="/blog/">Blog</SLink>
-        </Sli>
-        <Sli>
-          <SLink to="/about/">About</SLink>
-        </Sli>
-        {/* <Sli>
-          <SLink to="#contact">Contact</SLink>
-        </Sli> */}
-      </Sul>
-    </Snav>
+
+      </SHeaderWrapper>
   </Sheader>
 )
 

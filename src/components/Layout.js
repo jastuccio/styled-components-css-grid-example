@@ -10,16 +10,18 @@ import GlobalStyles from '../util/globalStyles'
 export const Container = styled.div`
   display: grid;
   height: 100vh;
-  grid-template-columns: 10rem 1fr 10rem;
+  width: 100vw;
+  grid-template-columns: 10vw 1fr 10vw;
   grid-template-rows: auto 1fr auto;
   grid-template-areas:
     'header header header'
     'main main main'
     'footer footer footer'
-    ${above.small`
-    grid-template-columns: 10vw 80vw 10vw;
-    max-width: 1920px;
-  `};
+
+    /* ${above.small`
+    grid-template-columns: 10vw 1fr 10vw;
+    /* max-width: 1920px; */
+  `}; */
 `
 
 const BodyContent = styled.div`
@@ -31,7 +33,7 @@ const Layout = props => (
     <GlobalStyles />
     <Container>
       <Header />
-      <BodyContent>{/* {props.children} */}</BodyContent>
+      <BodyContent>{props.children}</BodyContent>
       <Footer />
     </Container>
   </>
